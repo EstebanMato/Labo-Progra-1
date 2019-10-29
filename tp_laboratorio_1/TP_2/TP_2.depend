@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1569246328 source:c:\users\esteban\desktop\esteban\clases\tp_laboratorio_1\tp_2\menu.c
+
+1569245983 source:c:\users\esteban\desktop\esteban\clases\tp_laboratorio_1\tp_2\arrayemployees.c
+	"ArrayEmployees.h"
+
+1569245911 c:\users\esteban\desktop\esteban\clases\tp_laboratorio_1\tp_2\arrayemployees.h
+
+1570191565 source:c:\users\esteban\desktop\esteban\clases\tp_laboratorio_1\tp_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"empleado.h"
+
+1569246328 c:\users\esteban\desktop\esteban\clases\tp_laboratorio_1\tp_2\menu.c
+
+1570049265 source:c:\users\usuario\desktop\clases\tp_laboratorio_1\tp_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+
+1570191490 c:\users\esteban\desktop\esteban\clases\tp_laboratorio_1\tp_2\empleado.h
+
+1570191553 source:c:\users\esteban\desktop\esteban\clases\tp_laboratorio_1\tp_2\empleado.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"empleado.h"
+
+1570234674 source:e:\pendrive\esteban\clases\tp_laboratorio_1\tp_2\empleado.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"empleado.h"
+
+1570193302 e:\pendrive\esteban\clases\tp_laboratorio_1\tp_2\empleado.h
+
+1570234654 source:e:\pendrive\esteban\clases\tp_laboratorio_1\tp_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"empleado.h"
+

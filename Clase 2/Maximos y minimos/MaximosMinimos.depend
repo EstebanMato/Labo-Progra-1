@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1567459246 source:c:\users\usuario\documents\esteban\clases\clase 2\ejemplo 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+
+1567459246 source:c:\users\usuario\documents\esteban\clases\clase 2\maximos y minimos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+

@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1568208212 source:f:\pendrive\esteban\clases\clase 7\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1568212120 source:c:\users\esteban\desktop\esteban\clases\clase 7\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1568212120 source:c:\users\esteban\desktop\esteban\clases\clase 7\ordenar por legajo\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -1,0 +1,58 @@
+# depslib dependency file v1.0
+1567570502 source:c:\users\usuario\desktop\utn\tp1\tp1 final\tp_1\operations.c
+
+1567572477 source:c:\users\usuario\desktop\utn\tp1\tp1 final\tp_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"operations.h"
+
+1567572546 source:c:\users\usuario\desktop\utn\tp1\tp1 final\tp_1\showmenu.c
+	<stdio.h>
+	<stdlib.h>
+
+1567572508 c:\users\usuario\desktop\utn\tp1\tp1 final\tp_1\operations.h
+
+1567625449 source:c:\users\usuario\desktop\utn\tp_laboratorio_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"operations.h"
+
+1567572508 c:\users\usuario\desktop\utn\tp_laboratorio_1\operations.h
+
+1567570502 source:c:\users\usuario\desktop\utn\tp_laboratorio_1\operations.c
+
+1567572546 source:c:\users\usuario\desktop\utn\tp_laboratorio_1\showmenu.c
+	<stdio.h>
+	<stdlib.h>
+
+1567625449 source:u:\laboratorio y programacion 1\entrega de tps\tp_laboratorio_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"operations.h"
+
+1567572508 u:\laboratorio y programacion 1\entrega de tps\tp_laboratorio_1\operations.h
+
+1567570502 source:u:\laboratorio y programacion 1\entrega de tps\tp_laboratorio_1\operations.c
+
+1567572546 source:u:\laboratorio y programacion 1\entrega de tps\tp_laboratorio_1\showmenu.c
+	<stdio.h>
+	<stdlib.h>
+
+1567707633 source:c:\users\esteban\downloads\tp_laboratorio_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"operations.h"
+
+1567706292 c:\users\esteban\downloads\tp_laboratorio_1\operations.h
+
+1567706478 source:c:\users\esteban\downloads\tp_laboratorio_1\operations.c
+	"operations.h"
+
+1567700316 source:c:\users\esteban\downloads\tp_laboratorio_1\showmenu.c
+	<stdio.h>
+	<stdlib.h>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1568432993 source:d:\esteban mato\clases\clase 7\validacioncantchar\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

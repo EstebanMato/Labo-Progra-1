@@ -1,0 +1,134 @@
+# depslib dependency file v1.0
+1571702048 source:c:\users\usuario\desktop\clases\practica1erparcial\estebanmato\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+	"validaciones.h"
+	"alquileres.h"
+
+1572284307 source:c:\users\esteban\desktop\esteban\clases\practica1erparcial\estebanmato\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+	"validaciones.h"
+	"alquileres.h"
+
+1571705412 c:\users\esteban\desktop\esteban\clases\practica1erparcial\estebanmato\cliente.h
+
+1571659474 c:\users\esteban\desktop\esteban\clases\practica1erparcial\estebanmato\validaciones.h
+	"alquileres.h"
+
+1571698816 c:\users\esteban\desktop\esteban\clases\practica1erparcial\estebanmato\alquileres.h
+	"cliente.h"
+
+1571697966 source:c:\users\esteban\desktop\esteban\clases\practica1erparcial\estebanmato\validaciones.c
+	"validaciones.h"
+	<stdlib.h>
+	<string.h>
+
+1572282053 source:c:\users\esteban\desktop\esteban\clases\practica1erparcial\estebanmato\alquileres.c
+	"alquileres.h"
+	"validaciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1572272176 source:c:\users\esteban\desktop\esteban\clases\practica1erparcial\estebanmato\cliente.c
+	"cliente.h"
+	"validaciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1570639476 source:f:\pendrive\esteban\clases\practica1erparcial\estebanmato\cliente.c
+	"cliente.h"
+	"validaciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1571658916 f:\pendrive\esteban\clases\practica1erparcial\estebanmato\cliente.h
+
+1571659474 f:\pendrive\esteban\clases\practica1erparcial\estebanmato\validaciones.h
+	"alquileres.h"
+
+1571660912 f:\pendrive\esteban\clases\practica1erparcial\estebanmato\alquileres.h
+	"cliente.h"
+
+1571657280 source:f:\pendrive\esteban\clases\practica1erparcial\estebanmato\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+	"validaciones.h"
+	"alquileres.h"
+
+1570639476 source:f:\pendrive\esteban\clases\practica1erparcial\estebanmato\validaciones.c
+	"validaciones.h"
+	<stdlib.h>
+	<string.h>
+
+1571699136 source:d:\esteban mato recuperatorio\clases\practica1erparcial\estebanmato\alquileres.c
+	"alquileres.h"
+	"validaciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1571698815 d:\esteban mato recuperatorio\clases\practica1erparcial\estebanmato\alquileres.h
+	"cliente.h"
+
+1571697163 d:\esteban mato recuperatorio\clases\practica1erparcial\estebanmato\cliente.h
+
+1571659474 d:\esteban mato recuperatorio\clases\practica1erparcial\estebanmato\validaciones.h
+	"alquileres.h"
+
+1571700432 source:d:\esteban mato recuperatorio\clases\practica1erparcial\estebanmato\cliente.c
+	"cliente.h"
+	"validaciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1571702047 source:d:\esteban mato recuperatorio\clases\practica1erparcial\estebanmato\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+	"validaciones.h"
+	"alquileres.h"
+
+1571697964 source:d:\esteban mato recuperatorio\clases\practica1erparcial\estebanmato\validaciones.c
+	"validaciones.h"
+	<stdlib.h>
+	<string.h>
+
+1571699138 source:c:\users\usuario\desktop\clases\practica1erparcial\estebanmato\alquileres.c
+	"alquileres.h"
+	"validaciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1571698816 c:\users\usuario\desktop\clases\practica1erparcial\estebanmato\alquileres.h
+	"cliente.h"
+
+1571705411 c:\users\usuario\desktop\clases\practica1erparcial\estebanmato\cliente.h
+
+1571659474 c:\users\usuario\desktop\clases\practica1erparcial\estebanmato\validaciones.h
+	"alquileres.h"
+
+1571705471 source:c:\users\usuario\desktop\clases\practica1erparcial\estebanmato\cliente.c
+	"cliente.h"
+	"validaciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1571697966 source:c:\users\usuario\desktop\clases\practica1erparcial\estebanmato\validaciones.c
+	"validaciones.h"
+	<stdlib.h>
+	<string.h>
+
