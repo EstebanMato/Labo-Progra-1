@@ -32,6 +32,7 @@ void listaJuegoPorClienteDeterminado(eClientes clientes[], int tamC, eJuego jueg
 void listaJuegoMujeres(eClientes clientes[], int tamC, eJuego juegos[], int tamJ, eAlquileres alquiler[], int tamA, eLocalidad localidades[], int tamLoc);
 void mostrarClientesPorLocalidad(eClientes clientes[], int tamC, eLocalidad localidades[], int tamLoc);
 void listarJuegos(eJuego juegos[], int tamJ);
+void juegoPreferidoPorLocalidadIngresada(eClientes clientes[], int tamC, eAlquileres alquileres[], int tamA, eJuego juegos[], int tamJ, eLocalidad localidades[], int tamLoc);
 
 int main()
 {
@@ -242,7 +243,7 @@ int hardcodearClientes( eClientes vec[], int tamC, int cantidad)
 
     eClientes suplentes[]=
     {
-        {1001, "Esteban", "Mato",      'm', "1154770922", "peru 1225",2,0},
+        {1001, "Esteban", "Mato",      'm', "1154770922", "peru 1225",3,0},
         {1002, "Alberto", "Rodriguez", 'm', "1198543265", "bolivar 432",2,0},
         {1003, "Ana", "Luaccino",      'f', "1178453288", "chacabuco 2352",3,0},
         {1004, "Luis", "Veliz",        'm', "1199874566", "defensa 234",4,0},
@@ -272,7 +273,7 @@ int hardcodearAlquileres(eAlquileres vec[], int tamA, int cantidad)
     eAlquileres suplentes[]=
     {
         {1, 10, 1001, {22, 12, 2000}},
-        {2, 11, 1002, {16, 2, 2001}},
+        {2, 10, 1002, {16, 2, 2001}},
         {3, 12, 1004, {14, 3, 2002}},
         {4, 13, 1005, {2, 6, 2001}},
         {5, 14, 1001, {1, 9, 2006}},
@@ -281,7 +282,7 @@ int hardcodearAlquileres(eAlquileres vec[], int tamA, int cantidad)
         {8, 17, 1001, {13, 11, 2000}},
         {9, 18, 1002, {9, 10, 2018}},
         {10, 19, 1004, {8, 8, 2004}},
-        {11, 11, 1005, {27, 5, 2006}},
+        {11, 11, 1002, {27, 5, 2006}},
         {12, 12, 1005, {11, 1, 2017}},
         {13, 13, 1008, {3, 7, 2003}},
         {14, 14, 1009, {21, 9, 2005}},
@@ -317,9 +318,10 @@ void menuInformes(eJuego juegos[], int tamJ, eAlquileres alquileres[], int tamA,
         printf("3- Mostar total de importe pagado por cliente seleccionado\n");
         printf("4- Listado clientes que no alquilaron juegos\n");
         printf("5- Listado de juegos no alquilados\n");
-        printf("6- Clientes de una determinada localidad\n");
-        printf("7- Listado de juegos por mujeres\n");
-        printf("8- Listado clientes por determinado juego\n");
+        printf("11- Clientes de una determinada localidad\n");
+        printf("12- Juego preferido por localidad ingresada\n");
+        printf("17- Listado de juegos alquilados por mujeres\n");
+        printf("19- Listado clientes por determinado juego\n");
         printf("90- Salir\n");
         printf("\nIngrese opcion: ");
         fflush(stdin);
@@ -347,15 +349,19 @@ void menuInformes(eJuego juegos[], int tamJ, eAlquileres alquileres[], int tamA,
             listaJuegoNoAlquilado(juegos, tamJ, alquileres, tamA, categorias, tamCat);
             break;
 
-        case 6:
+        case 11:
             mostrarClientesPorLocalidad(clientes, tamC, localidades, tamLoc);
             break;
 
-        case 7:
+        case 12:
+            juegoPreferidoPorLocalidadIngresada(clientes, tamC, alquileres, tamA, juegos, tamJ, localidades, tamLoc);
+            break;
+
+        case 17:
             listaJuegoMujeres(clientes, tamC, juegos, tamJ, alquileres, tamA, localidades, tamLoc);
             break;
 
-        case 8:
+        case 19:
             listaJuegoPorClienteDeterminado(clientes, tamC, juegos, tamJ, alquileres, tamA, localidades, tamLoc);
             break;
 
@@ -629,3 +635,44 @@ void listarJuegos(eJuego juegos[], int tamJ)
     }
 }
 
+
+void juegoPreferidoPorLocalidadIngresada(eClientes clientes[], int tamC, eAlquileres alquileres[], int tamA, eJuego juegos[], int tamJ, eLocalidad localidades[], int tamLoc)
+{
+    int cantJuegos[tamJ];
+    int mayor;
+    int flag=0;
+    int localidad;
+
+    mostrarLocalidades(localidades, tamLoc);
+
+    printf("\nIngrese la localidad deseada: ");
+    fflush(stdin);
+    scanf("%d", &localidad);
+
+    for(int i=0; i<tamJ; i++)
+    {
+        cantJuegos[i]=0;
+        for(int j=0; j<tamA; j++)
+        {
+            if(juegos[i].codigo == alquileres[j].codJuego)
+            {
+                for(int k=0; k<tamC; k++)
+                {
+                    if(alquileres[j].codCliente == clientes[k].codigo)
+                    {
+                        if(clientes[k].idLocalidad == localidad)
+                        {
+                            cantJuegos[i]+=1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    for(int i=0; i<tamJ; i++)
+    {
+        printf("Cantidades %d %d\n",i, cantJuegos[i]);
+    }
+}

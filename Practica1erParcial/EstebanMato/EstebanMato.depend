@@ -132,3 +132,38 @@
 	<stdlib.h>
 	<string.h>
 
+1572282054 source:c:\users\esteban\desktop\labo-progra-1\practica1erparcial\estebanmato\alquileres.c
+	"alquileres.h"
+	"validaciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1571698816 c:\users\esteban\desktop\labo-progra-1\practica1erparcial\estebanmato\alquileres.h
+	"cliente.h"
+
+1571705412 c:\users\esteban\desktop\labo-progra-1\practica1erparcial\estebanmato\cliente.h
+
+1571659474 c:\users\esteban\desktop\labo-progra-1\practica1erparcial\estebanmato\validaciones.h
+	"alquileres.h"
+
+1572272178 source:c:\users\esteban\desktop\labo-progra-1\practica1erparcial\estebanmato\cliente.c
+	"cliente.h"
+	"validaciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1571697966 source:c:\users\esteban\desktop\labo-progra-1\practica1erparcial\estebanmato\validaciones.c
+	"validaciones.h"
+	<stdlib.h>
+	<string.h>
+
+1572362836 source:c:\users\esteban\desktop\labo-progra-1\practica1erparcial\estebanmato\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+	"validaciones.h"
+	"alquileres.h"
+
