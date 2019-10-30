@@ -63,3 +63,17 @@ int validarCodCliente(eClientes cliente[], int tamC, int codigo)
     }
     return encontro;
 }
+
+int validarLocalidad(eLocalidad localidades[], int tamLoc, int id)
+{
+    int encontro =0;
+    for(int i=0; i<tamLoc; i++)
+    {
+        if(localidades[i].id==id)
+        {
+            encontro=1;
+            break;
+        }
+    }
+    return encontro;
+}

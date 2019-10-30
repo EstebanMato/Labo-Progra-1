@@ -52,3 +52,13 @@ int validarCodJuego(eJuego juego[], int tamJ, int codigo);
  *
  */
 int validarCodCliente(eClientes cliente[], int tamC, int codigo);
+
+/** \brief valida si la localidad ingresada es correcta
+ *
+ * \param localidades[] eLocalidad
+ * \param tamLoc int
+ * \param id int
+ * \return int 1 si encontro o 0 si no
+ *
+ */
+int validarLocalidad(eLocalidad localidades[], int tamLoc, int id);
