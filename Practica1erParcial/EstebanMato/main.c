@@ -34,7 +34,9 @@ void mostrarClientesPorLocalidad(eClientes clientes[], int tamC, eLocalidad loca
 void listarJuegos(eJuego juegos[], int tamJ);
 void juegoPreferidoPorLocalidadIngresada(eClientes clientes[], int tamC, eAlquileres alquileres[], int tamA, eJuego juegos[], int tamJ, eLocalidad localidades[], int tamLoc);
 void recaudacionDeLocalidadPorCliente(eLocalidad localidades[], int tamLoc, eClientes clientes[], int tamC, eAlquileres alquileres[], int tamA, eJuego juegos[], int tamJ);
-
+void mostrarJuegoFechaCliente(eJuego juegos[], int tamJ, eClientes clientes[], int tamC, eAlquileres alquileres[], int tamA, eLocalidad localidades[], int tamLoc);
+int contarJuegosPorCategoria(eCategoria categoria, eAlquileres alquileres[], int tamA, eJuego juegos[], int tamJ);
+void catJuegoMenosAlquilada(eJuego juegos[], int tamJ, eCategoria categoria[], int tamCat, eAlquileres alquileres[], int tamA);
 
 int main()
 {
@@ -73,10 +75,10 @@ int main()
 
     eLocalidad listaLoc[]=
     {
-        {1, "Buenos Aires"},
+        {1, "Villa del parque"},
         {2, "Avellaneda"},
         {3, "San Telmo"},
-        {4, "Berazategui"},
+        {4, "Centro"},
         {5, "Parque patricios"},
     };
 
@@ -96,7 +98,7 @@ int main()
     char salir='n';
     char salirTot='n';
 
-    idCodigoAlquiler+= hardcodearAlquileres(listaAlq, ALQUILERES, 1);
+    idCodigoAlquiler+= hardcodearAlquileres(listaAlq, ALQUILERES, 20);
     idCliente+= hardcodearClientes(listaC, CLIENTES, 10);
 
     do{
@@ -245,16 +247,16 @@ int hardcodearClientes( eClientes vec[], int tamC, int cantidad)
 
     eClientes suplentes[]=
     {
-        {1001, "Esteban", "Mato",      'm', "1154770922", "peru 1225",3,0},
-        {1002, "Alberto", "Rodriguez", 'm', "1198543265", "bolivar 432",2,0},
-        {1003, "Ana", "Luaccino",      'f', "1178453288", "chacabuco 2352",3,0},
-        {1004, "Luis", "Veliz",        'm', "1199874566", "defensa 234",4,0},
-        {1005, "Alicia", "Mendoza",    'f', "1133648795", "humberto primo 756",5,0},
-        {1006, "Diego", "Aaron",       'm', "1154701269", "san juan 541",2,0},
-        {1007, "Sofia", "Zotela",      'f', "1197535412", "cochabamba 12357",2,0},
-        {1008, "Clara", "Abbe",        'f', "1199755003", "paseo colon 2348",3,0},
-        {1009, "Maria", "Mas",        'f', "1103694107", "uspallate 3160",4,0},
-        {1010, "Ricardo", "Gimenez",   'm', "1198736812", "piedras 9865",5,0},
+        {1001, "Esteban", "Mato",      'm', "1154770922", "Peru 1225",3,0},
+        {1002, "Luca", "Deliso",       'm', "1198543265", "Av. Mitre 432",2,0},
+        {1003, "Ana", "Luaccino",      'f', "1178453288", "Chacabuco 2352",3,0},
+        {1004, "Pablo", "Veliz",       'm', "1199874566", "Uruguay 234",4,0},
+        {1005, "Alicia", "Mendoza",    'f', "1133648795", "Corrientes 1687",4,0},
+        {1006, "Diego", "Aaron",       'm', "1154701269", "Av. Belgrano 541",2,0},
+        {1007, "Sofia", "Zotela",      'f', "1197535412", "Av. Mitre 2466",2,0},
+        {1008, "Clara", "Abbe",        'f', "1199755003", "Bolivar 2348",3,0},
+        {1009, "Maria", "Mas",         'f', "1103694107", "Uspallata 3160",5,0},
+        {1010, "Ricardo", "Gimenez",   'm', "1198736812", "Atuel 1300",5,0},
     };
 
     if( cantidad <= 10 && tamC >= cantidad)
@@ -323,6 +325,8 @@ void menuInformes(eJuego juegos[], int tamJ, eAlquileres alquileres[], int tamA,
         printf("11- Clientes de una determinada localidad\n");
         printf("12- Juego preferido por localidad ingresada\n");
         printf("13- Listar recaudacion por localidad de cada cliente\n");
+        printf("14- Mostar fecha y quien alquilo determinado juego\n");
+        printf("15- Categoria de juego menos alquilada\n");
         printf("17- Listado de juegos alquilados por mujeres\n");
         printf("19- Listado clientes por determinado juego\n");
         printf("99- Salir\n");
@@ -362,6 +366,14 @@ void menuInformes(eJuego juegos[], int tamJ, eAlquileres alquileres[], int tamA,
 
         case 13:
             recaudacionDeLocalidadPorCliente(localidades, tamLoc, clientes, tamC, alquileres, tamA, juegos, tamJ);
+            break;
+
+        case 14:
+            mostrarJuegoFechaCliente(juegos, tamJ, clientes, tamC, alquileres, tamA, localidades, tamLoc);
+            break;
+
+        case 15:
+            catJuegoMenosAlquilada(juegos, tamJ, categorias, tamCat, alquileres, tamA);
             break;
 
         case 17:
@@ -732,7 +744,6 @@ void recaudacionDeLocalidadPorCliente(eLocalidad localidades[], int tamLoc, eCli
         scanf("%d", &localidad);
     }
 
-
     for(int i=0; i<tamA; i++)
     {
         for(int j=0; j<tamC; j++)
@@ -757,7 +768,6 @@ void recaudacionDeLocalidadPorCliente(eLocalidad localidades[], int tamLoc, eCli
     printf("\n\nListado por cliente: ");
     printf("\nCodigo     Nombre   Apellido  Sexo      Telefono              Domicilio            Localidad  Importe");
 
-
     for(int i=0; i<tamC; i++)
     {
         if(vecClientes[i]!=0)
@@ -766,5 +776,88 @@ void recaudacionDeLocalidadPorCliente(eLocalidad localidades[], int tamLoc, eCli
             printf("    $%d",vecClientes[i]);
         }
     }
+}
 
+void mostrarJuegoFechaCliente(eJuego juegos[], int tamJ, eClientes clientes[], int tamC, eAlquileres alquileres[], int tamA, eLocalidad localidades[], int tamLoc)
+{
+    int idJuego;
+
+    listarJuegos(juegos, tamJ);
+    printf("\nIngrese el id de juego: ");
+    fflush(stdin);
+    scanf("%d", &idJuego);
+
+    while(!validarCodJuego(juegos, tamJ, idJuego))
+    {
+        printf("ERROR id de juego incorrecto.\n\nReingrese el id: ");
+        fflush(stdin);
+        scanf("%d", &idJuego);
+    }
+
+    printf("\nCodigo     Nombre   Apellido  Sexo      Telefono              Domicilio            Localidad  Fecha(dd/mm/aaaa)");
+    for(int i=0; i<tamA; i++)
+    {
+        if(idJuego== alquileres[i].codJuego)
+        {
+            for(int j=0; j<tamC; j++)
+            {
+                if(alquileres[i].codCliente == clientes[j].codigo)
+                {
+                    listarCliente(clientes[j], localidades, tamLoc);
+                    printf("  %02d/%02d/%4d", alquileres[i].fecha.dia, alquileres[i].fecha.mes, alquileres[i].fecha.anio);
+                }
+            }
+        }
+    }
+}
+
+void catJuegoMenosAlquilada(eJuego juegos[], int tamJ, eCategoria categoria[], int tamCat, eAlquileres alquileres[], int tamA)
+{
+    int vecCategoria[tamCat];
+    int menor;
+    int flag=0;
+
+    for(int i=0; i<tamCat; i++)
+    {
+        vecCategoria[i]=contarJuegosPorCategoria(categoria[i], alquileres, tamA, juegos, tamJ );
+    }
+
+    for(int i=0; i<tamCat; i++)
+    {
+        if(vecCategoria[i]<menor || !flag)
+        {
+            menor=vecCategoria[i];
+            flag=1;
+        }
+    }
+
+    printf("\nLas categorias de juegos menos alquilada es:");
+
+    for(int i=0; i<tamCat; i++)
+    {
+        if(vecCategoria[i] == menor)
+        {
+            printf("\n%s", categoria[i].descrpcion);
+        }
+    }
+    printf("\nCon %d alquileres",menor);
+}
+
+int contarJuegosPorCategoria(eCategoria categoria, eAlquileres alquileres[], int tamA, eJuego juegos[], int tamJ)
+{
+    int cantidad=0;
+    for(int i=0; i<tamA; i++)
+    {
+        for(int j=0; j<tamJ; j++)
+        {
+            if(alquileres[i].codJuego == juegos[j].codigo)
+            {
+                if(juegos[j].idCategoria == categoria.id)
+                {
+                    cantidad++;
+                }
+            }
+        }
+    }
+    return cantidad;
 }
