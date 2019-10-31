@@ -37,6 +37,8 @@ void recaudacionDeLocalidadPorCliente(eLocalidad localidades[], int tamLoc, eCli
 void mostrarJuegoFechaCliente(eJuego juegos[], int tamJ, eClientes clientes[], int tamC, eAlquileres alquileres[], int tamA, eLocalidad localidades[], int tamLoc);
 int contarJuegosPorCategoria(eCategoria categoria, eAlquileres alquileres[], int tamA, eJuego juegos[], int tamJ);
 void catJuegoMenosAlquilada(eJuego juegos[], int tamJ, eCategoria categoria[], int tamCat, eAlquileres alquileres[], int tamA);
+void telefonoPorfecha(eAlquileres alquileres[], int tamA, eClientes clientes[], int tamC, eLocalidad localidades[], int tamLoc);
+
 
 int main()
 {
@@ -98,7 +100,7 @@ int main()
     char salir='n';
     char salirTot='n';
 
-    idCodigoAlquiler+= hardcodearAlquileres(listaAlq, ALQUILERES, 20);
+    idCodigoAlquiler+= hardcodearAlquileres(listaAlq, ALQUILERES, 1);
     idCliente+= hardcodearClientes(listaC, CLIENTES, 10);
 
     do{
@@ -327,6 +329,7 @@ void menuInformes(eJuego juegos[], int tamJ, eAlquileres alquileres[], int tamA,
         printf("13- Listar recaudacion por localidad de cada cliente\n");
         printf("14- Mostar fecha y quien alquilo determinado juego\n");
         printf("15- Categoria de juego menos alquilada\n");
+        printf("16- Listado de telefonos en determinada fecha de alquiler\n");
         printf("17- Listado de juegos alquilados por mujeres\n");
         printf("19- Listado clientes por determinado juego\n");
         printf("99- Salir\n");
@@ -374,6 +377,10 @@ void menuInformes(eJuego juegos[], int tamJ, eAlquileres alquileres[], int tamA,
 
         case 15:
             catJuegoMenosAlquilada(juegos, tamJ, categorias, tamCat, alquileres, tamA);
+            break;
+
+        case 16:
+            telefonoPorfecha(alquileres, tamA, clientes, tamC, localidades, tamLoc);
             break;
 
         case 17:
@@ -861,3 +868,114 @@ int contarJuegosPorCategoria(eCategoria categoria, eAlquileres alquileres[], int
     }
     return cantidad;
 }
+
+void telefonoPorfecha(eAlquileres alquileres[], int tamA, eClientes clientes[], int tamC, eLocalidad localidades[], int tamLoc)
+{
+    int dia;
+    int mes;
+    int anio;
+    int flag=0;
+
+    printf("\nIngrese fecha de alquiler: ");
+        printf("\nMes(MM): ");
+        fflush(stdin);
+        scanf("%d", &mes);
+
+        while(mes>12 || mes<1)
+        {
+            printf("\nERROR. mes incorrecto, ingrese nuevamente el mes(1-12): ");
+            fflush(stdin);
+            scanf("%d", &mes);
+        }
+
+        switch(mes)
+        {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            printf("\nDia(DD): ");
+            fflush(stdin);
+            scanf("%d", &dia);
+
+            while(dia>31 || dia<1)
+            {
+                printf("\nERROR. dia incorrecto, ingrese nuevamente el dia(1-31): ");
+                fflush(stdin);
+                scanf("%d", &dia);
+            }
+            break;
+
+        case 2:
+            printf("\nDia(DD): ");
+            fflush(stdin);
+            scanf("%d", &dia);
+
+            while(dia>28 || dia<1)
+            {
+                printf("\nERROR. dia incorrecto, ingrese nuevamente el dia(1-28): ");
+                fflush(stdin);
+                scanf("%d", &dia);
+            }
+            break;
+
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            printf("\nDia(DD): ");
+            fflush(stdin);
+            scanf("%d", &dia);
+
+            while(dia>30 || dia<1)
+            {
+                printf("\nERROR. dia incorrecto, ingrese nuevamente el dia(1-30): ");
+                fflush(stdin);
+                scanf("%d", &dia);
+            }
+            break;
+        }
+
+        printf("\nAnio(AAAA): ");
+        fflush(stdin);
+        scanf("%d", &anio);
+
+        while(anio>2018 || anio<2000)
+        {
+            printf("\nERROR. anio incorrecto, ingrese nuevamente el anio(rango entre 2000 - 2018): ");
+            fflush(stdin);
+            scanf("%d", &anio);
+        }
+    system("cls");
+    printf("Para la fecha %02d/%02d/%4d\n", dia, mes, anio);
+    printf("\nLos clientes que realizaron un alquiler son: ");
+    printf("\n\nCodigo     Nombre   Apellido  Sexo      Telefono              Domicilio            Localidad");
+    for(int i=0; i<tamA; i++)
+    {
+        if(alquileres[i].fecha.anio == anio)
+        {
+            if(alquileres[i].fecha.mes == mes)
+            {
+                if(alquileres[i].fecha.dia == dia)
+                {
+                    for(int j=0; j<tamC; j++)
+                    {
+                        if(alquileres[i].codCliente == clientes[j].codigo)
+                        {
+                            listarCliente(clientes[j], localidades, tamLoc);
+                            flag=1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    if(!flag){
+        printf("\nNo hay alquileres realizados para la fecha ingresada");
+    }
+}
+

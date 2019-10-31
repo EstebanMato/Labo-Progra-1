@@ -62,3 +62,4 @@ int validarCodCliente(eClientes cliente[], int tamC, int codigo);
  *
  */
 int validarLocalidad(eLocalidad localidades[], int tamLoc, int id);
+
