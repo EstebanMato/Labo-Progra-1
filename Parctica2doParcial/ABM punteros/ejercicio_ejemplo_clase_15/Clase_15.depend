@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1453762398 source:c:\users\esteban\desktop\labo-progra-1\parctica2doparcial\abm punteros\ejercicio_ejemplo_clase_15\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+
+1572630165 source:c:\users\esteban\desktop\labo-progra-1\parctica2doparcial\abm punteros\ejercicio_ejemplo_clase_15\main.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+
+1453762398 c:\users\esteban\desktop\labo-progra-1\parctica2doparcial\abm punteros\ejercicio_ejemplo_clase_15\utn.h
+
