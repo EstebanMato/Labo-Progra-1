@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1572649592 source:d:\esteban mato\labo-progra-1\clase 17\autos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
