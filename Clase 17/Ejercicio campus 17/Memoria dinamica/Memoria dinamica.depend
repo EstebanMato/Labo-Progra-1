@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1572977971 source:c:\users\esteban\desktop\labo-progra-1\clase 17\ejercicio campus 17\memoria dinamica\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
