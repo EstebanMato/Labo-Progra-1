@@ -53,49 +53,70 @@
 	"LinkedList.h"
 	"Employee.h"
 
-1560648493 source:c:\users\admiral\documents\tp3_laboratorio_1\controller.c
+1572913830 source:d:\esteban mato\labo-progra-1\tp_laboratorio_1\tp_3\tp3\win_64\controller.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
-	"validaciones.h"
-	"parser.h"
 
-1560647118 c:\users\admiral\documents\tp3_laboratorio_1\linkedlist.h
+1572906714 d:\esteban mato\labo-progra-1\tp_laboratorio_1\tp_3\tp3\win_64\linkedlist.h
 
-1560647603 c:\users\admiral\documents\tp3_laboratorio_1\employee.h
+1572913830 d:\esteban mato\labo-progra-1\tp_laboratorio_1\tp_3\tp3\win_64\employee.h
 
-1560647017 c:\users\admiral\documents\tp3_laboratorio_1\validaciones.h
+1572906714 source:d:\esteban mato\labo-progra-1\tp_laboratorio_1\tp_3\tp3\win_64\employee.c
 
-1560648776 source:c:\users\admiral\documents\tp3_laboratorio_1\main.c
+1572906714 source:d:\esteban mato\labo-progra-1\tp_laboratorio_1\tp_3\tp3\win_64\main.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Controller.h"
 	"Employee.h"
-	"validaciones.h"
 
-1560475979 c:\users\admiral\documents\tp3_laboratorio_1\controller.h
+1572906714 d:\esteban mato\labo-progra-1\tp_laboratorio_1\tp_3\tp3\win_64\controller.h
 
-1560544408 source:c:\users\admiral\documents\tp3_laboratorio_1\parser.c
+1572906714 source:d:\esteban mato\labo-progra-1\tp_laboratorio_1\tp_3\tp3\win_64\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
+
+1572954247 source:c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_3\tp3_propio\win_64\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1572954247 c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_3\tp3_propio\win_64\linkedlist.h
+
+1573052281 c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_3\tp3_propio\win_64\employee.h
+
+1572954247 source:c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_3\tp3_propio\win_64\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1572954247 c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_3\tp3_propio\win_64\controller.h
+
+1572954247 source:c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_3\tp3_propio\win_64\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1573049908 source:c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_3\tp3_propio\win_64\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
 	"validaciones.h"
 
-1560648747 source:c:\users\admiral\documents\tp3_laboratorio_1\employee.c
+1573057703 source:c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_3\tp3_propio\win_64\employee.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Employee.h"
 	"validaciones.h"
 
-1560647059 source:c:\users\admiral\documents\tp3_laboratorio_1\validaciones.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"validaciones.h"
-
-1560475979 c:\users\admiral\documents\tp3_laboratorio_1\parser.h
+1573049787 c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_3\tp3_propio\win_64\validaciones.h
 
