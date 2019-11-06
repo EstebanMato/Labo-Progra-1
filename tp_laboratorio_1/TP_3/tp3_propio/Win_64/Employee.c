@@ -71,7 +71,7 @@ int employee_setNombre(Employee* this,char* nombre)
 {
     int todoOk=0;
 
-    if(this != NULL && nombre != NULL && strlen(nombre) < 128)
+    if(this != NULL && nombre != NULL && strlen(nombre) < 127)
     {
         strcpy(this->nombre, nombre);
         todoOk=1;
@@ -98,18 +98,15 @@ int employee_setSueldo(Employee* this,int sueldo)
 {
     int todoOk=0;
 
-    if(this != NULL)
+    if(this != NULL && sueldo >=0)
     {
-        if(sueldo >= 0)
-        {
-            this->sueldo = sueldo;
-            todoOk = 1;
-        }
+        this->sueldo = sueldo;
+        todoOk = 1;
     }
     return todoOk;
 }
 
-int employee_getId(Employee* this,int* id)
+int employee_getId(Employee* this, int* id)
 {
     int todoOk=0;
 

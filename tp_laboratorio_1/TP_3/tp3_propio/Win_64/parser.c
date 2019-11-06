@@ -34,7 +34,7 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
 
             if(nEmpleado != NULL)
             {
-                if(ll_add(pArrayListEmployee,nEmpleado))
+                if(ll_add(pArrayListEmployee,nEmpleado) == 0)
                 {
                     todoOk = 1;
                 }
@@ -69,24 +69,23 @@ int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee)
                 break;
             }
 
-            cantidadDatos = fread(nEmpleado, sizeof(Employee), 1, pFile);
+            cantidad = fread(nEmpleado, sizeof(Employee), 1, pFile);
 
-            if(cantidadDatos < 1)
+            if(cantidad < 1)
             {
                 break;
             }
 
-            if(ll_add(pArrayListEmployee, pEmpleado))
+            if(ll_add(pArrayListEmployee, nEmpleado)==0)
             {
-                todoOk=0;
+                todoOk=1;
             }
             else
             {
-                employee_delete(pEmpleado); // si no obtengo la línea de datos que esperaba, borro el espacio que separé
+                employee_delete(nEmpleado);
             }
         }
     }
 
-    return retorno;
-    return 1;
+    return todoOk;
 }

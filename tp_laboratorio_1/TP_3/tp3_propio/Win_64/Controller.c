@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "LinkedList.h"
 #include "Employee.h"
+#include "parser.h"
 
 
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo texto).
@@ -13,7 +14,24 @@
  */
 int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int todoOk=0;
+    FILE* pFile=NULL;
+
+    if(pArrayListEmployee != NULL)
+    {
+        pFile = fopen(path, "r");
+
+        if(pFile != NULL)
+        {
+            if(parser_EmployeeFromText(pFile , pArrayListEmployee))
+            {
+                fclose(pFile);
+                todoOk = 1;
+            }
+        }
+    }
+
+    return todoOk;
 }
 
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo binario).
@@ -25,7 +43,24 @@ int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int todoOk=0;
+    FILE* pFile=NULL;
+
+    if(pArrayListEmployee != NULL)
+    {
+        pFile = fopen(path, "rb");
+
+        if(pFile != NULL)
+        {
+            if(parser_EmployeeFromBinary(pFile , pArrayListEmployee))
+            {
+                fclose(pFile);
+                todoOk = 1;
+            }
+        }
+    }
+
+    return todoOk;
 }
 
 /** \brief Alta de empleados
@@ -37,7 +72,21 @@ int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int todoOk=0;
+    char id[20];
+    char nombre[128];
+    char horasTrabajadas[20];
+    char sueldo[20];
+    Employee* auxEmployee;
+
+    if(pArrayListEmployee != NULL)
+    {
+        if(getNumber(id,"Ingrese Id: ", "ERROR. Numero invalido, reingrese Id: "))
+        {
+
+        }
+
+    return todoOk;
 }
 
 /** \brief Modificar datos de empleado

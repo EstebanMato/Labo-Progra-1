@@ -18,3 +18,24 @@ int esNumeroEntero (char* vStr)
     }
     return todoOk;
 }
+
+int getNumber(char* pStr, char* msg, char* msgE)
+{
+    int todoOk=0;
+
+    printf("\n%s",msg);
+    fflush(stdin);
+    gets(pStr);
+
+    while(!esNumeroEntero(pStr))
+    {
+        printf("\n%s",msgE);
+        fflush(stdin);
+        gets(pStr);
+    }
+    todoOk=1;
+
+    return todoOk;
+}
+
+int findEmployee()

@@ -44,3 +44,18 @@
 	<conio.h>
 	"empleado.h"
 
+1572954247 source:c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_2\empleado.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"empleado.h"
+
+1572954247 c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_2\empleado.h
+
+1572954247 source:c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"empleado.h"
+
