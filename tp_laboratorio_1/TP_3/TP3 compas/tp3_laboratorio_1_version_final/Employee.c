@@ -45,7 +45,7 @@ int employee_setId(Employee* this, char* value)
 
         if(auxID >= 0)
         {
-            this->id = auxID;
+            strcpy(this->id , auxID);
             retorno = 0;
         }
     }
@@ -62,7 +62,7 @@ int employee_setSueldo(Employee* this,char* value)
 
         if(auxSueldo >= 0)
         {
-            this->sueldo = auxSueldo;
+            strcpy(this->sueldo,auxSueldo);
             retorno = 0;
         }
     }
@@ -94,7 +94,7 @@ int employee_setHorasTrabajadas(Employee* this,char* value)
 
         if(auxHoras >= 0)
         {
-            this->horasTrabajadas = auxHoras;
+            strcpy(this->horasTrabajadas,auxHoras);
 
             retorno = 0;
         }

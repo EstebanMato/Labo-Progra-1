@@ -2,10 +2,10 @@
 #define employee_H_INCLUDED
 typedef struct
 {
-    int id;
+    char id[1280];
     char nombre[128];
-    int horasTrabajadas;
-    int sueldo;
+    char horasTrabajadas[1280];
+    char sueldo[1280];
 }Employee;
 
 #endif // employee_H_INCLUDED

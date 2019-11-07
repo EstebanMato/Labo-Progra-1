@@ -3,6 +3,7 @@
 #include "LinkedList.h"
 #include "Controller.h"
 #include "Employee.h"
+#include "validaciones.h"
 
 /****************************************************
     Menu:
@@ -21,15 +22,88 @@
 
 int main()
 {
-    int option = 0;
+    int flag=0;
     LinkedList* listaEmpleados = ll_newLinkedList();
-    do{
-        switch(option)
-        {
-            case 1:
-                controller_loadFromText("data.csv",listaEmpleados);
-                break;
-        }
-    }while(option != 10);
+    char salir = 'n';
+
+    if(listaEmpleados!=NULL)
+    {
+        do{
+            switch(menu())
+            {
+                case 1:
+                    if(!flag)
+                    {
+                        if(controller_loadFromText("data.csv",listaEmpleados))
+                        {
+                            flag=1;
+                            printf("\nArchivo cargado correctamente.\n");
+                        }
+                        else
+                        {
+                            printf("\nNo se pudo cargar el archivo correctamente.\n");
+                        }
+                    }
+                    else
+                    {
+                        printf("\nYa se cargo el archivo.\n");
+                    }
+                    break;
+
+                case 2:
+                    if(!flag)
+                    {
+                        if(controller_loadFromBinary("data.bin",listaEmpleados))
+                        {
+                            flag=1;
+                            printf("\nArchivo cargado correctamente.\n");
+                        }
+                        else
+                        {
+                            printf("\nNo se pudo cargar el archivo correctamente.\n");
+                        }
+                    }else
+                    {
+                        printf("\nYa se cargo el archivo.\n");
+                    }
+                    break;
+
+                case 3:
+                    controller_addEmployee(listaEmpleados);
+                    break;
+
+                case 6:
+                    controller_ListEmployee(listaEmpleados);
+                    break;
+
+                case 9:
+                    if(flag)
+                    {
+                        controller_saveAsBinary("data.bin" , listaEmpleados);
+                        printf("\nSe genero el archivo binario(.bin) correctamente.\n");
+                    }else
+                    {
+                        printf("\nDebe cargarse un archivo primeramente.\n");
+                    }
+
+                    break;
+
+                case 10:
+                    printf("\nConfirma la salida del sistema? (s/n): ");
+                    fflush(stdin);
+                    scanf("%c",&salir);
+                    break;
+
+                default:
+                    printf("\nOPCION INVALIDA\n");
+
+            }
+        system("pause");
+        }while(salir == 'n');
+    }
+    else
+    {
+        printf("\nERROR. No se consiguio espacio en memoria para el LinkedList");
+    }
     return 0;
 }

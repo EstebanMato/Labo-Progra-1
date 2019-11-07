@@ -99,7 +99,7 @@
 
 1560475979 c:\users\admiral\documents\tp3_laboratorio_1\parser.h
 
-1572954246 source:c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_3\tp3 compas\tp3_laboratorio_1_version_final\controller.c
+1573066414 source:c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_3\tp3 compas\tp3_laboratorio_1_version_final\controller.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -109,13 +109,13 @@
 
 1572954246 c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_3\tp3 compas\tp3_laboratorio_1_version_final\linkedlist.h
 
-1573044827 c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_3\tp3 compas\tp3_laboratorio_1_version_final\employee.h
+1573149051 c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_3\tp3 compas\tp3_laboratorio_1_version_final\employee.h
 
 1572954246 c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_3\tp3 compas\tp3_laboratorio_1_version_final\validaciones.h
 
 1572954246 c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_3\tp3 compas\tp3_laboratorio_1_version_final\parser.h
 
-1573043909 source:c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_3\tp3 compas\tp3_laboratorio_1_version_final\employee.c
+1573148989 source:c:\users\esteban\desktop\labo-progra-1\tp_laboratorio_1\tp_3\tp3 compas\tp3_laboratorio_1_version_final\employee.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

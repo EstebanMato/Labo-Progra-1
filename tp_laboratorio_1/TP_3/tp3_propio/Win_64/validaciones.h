@@ -9,8 +9,7 @@
 * \param array de char
 * \return retorna 0 si hay error, 1 si todo ok
 */
-int esNumeroEntero (char* vStr);
-
+int esNumeroEntero (char* vStr);//confirmada y usada
 
 
 /** \brief
@@ -21,32 +20,22 @@ int esNumeroEntero (char* vStr);
  * \return int
  *
  */
-int getNumber(char* pStr, char* msg, char* msgE);
+int getNumber(char* pStr, char* msg, char* msgE);//confirmada y usada
 
+/** \brief
+ *
+ * \param pStr char*
+ * \param msg char*
+ * \param msgE char*
+ * \return int
+ *
+ */
+int getString(char* pStr, char* msg, char* msgE);//confirmada y usada
 
 /** \brief
  *
  * \return int
  *
  */
-int obtenerNombre(LinkedList* pArrayListEmployee)
-{
-
-}
-
-
-/** \brief
- *
- * \return int
- *
- */
-int obtenerHorasTrabajadas();
-
-
-/** \brief
- *
- * \return int
- *
- */
-int obtenerSueldo();
+int menu();//confirmada y usada
 
